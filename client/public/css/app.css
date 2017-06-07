@@ -2,6 +2,6 @@
     display: none !important;
 }
 
-.queue-actions button {
+.queue-actions button, .list-actions button, .list-actions input {
     margin: 10px 0;
 }

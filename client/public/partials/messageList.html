@@ -1,4 +1,16 @@
 <div class="list-group">
+    <div class="list-actions" ng-show="messages.length > 0">
+        <div class="input-group">
+          <input ng-model="searchQuery" type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button ng-click="search(searchQuery)" class="btn btn-default" type="button">
+                Go
+            </button>
+          </span>
+        </div>
+        <button ng-click="previousPage()" class="btn btn-default btn-prev-page">&lt;</button>
+        <button ng-click="nextPage()" class="btn btn-default btn-next-page">&gt;</button>
+    </div>
     <div class="list-group-item list-group-item-warning" ng-show="0 == messages.length">No Messages.</div>
     <div class="list-group-item" ng-repeat="message in messages">
         <p>MessageId: {{ message.MessageId }}</p>
